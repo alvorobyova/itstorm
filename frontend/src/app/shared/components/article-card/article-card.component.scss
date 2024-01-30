@@ -1,0 +1,68 @@
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.articles-item {
+  position: relative;
+  width: 291px;
+  @include flex-column;
+  margin-top: 40px;
+
+
+  .articles-category {
+    position: absolute;
+    top: 10px;
+    right: 9px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    background: #FFF;
+    color: $light-blue-color;
+    font-size: 11px;
+  }
+
+  .articles-image {
+    @include bg-pos-size-repeat;
+    width: 291px;
+    height: 291px;
+    border-radius: 5px;
+    color: $light-blue-color;
+  }
+
+  .articles-text {
+    height: 224px;
+    margin: 15px 0 20px;
+
+
+    .articles-title {
+      @include medium-titles-20;
+      line-height: 130%;
+      margin-bottom: 20px;
+
+      &.truncate {
+        -webkit-line-clamp: 3; /* Число отображаемых строк */
+        display: -webkit-box;
+        -webkit-box-orient: vertical; /* Вертикальная ориентация */
+        overflow: hidden;
+      }
+    }
+
+    .articles-description {
+      font-size: 14px;
+      line-height: 130%;
+
+      &.truncate {
+        -webkit-line-clamp: 7; /* Число отображаемых строк */
+        display: -webkit-box;
+        -webkit-box-orient: vertical; /* Вертикальная ориентация */
+        overflow: hidden;
+      }
+    }
+  }
+
+
+  a {
+    color: $light-blue-color;
+    font-size: 16px;
+    text-decoration-line: underline;
+
+  }
+}

@@ -1,0 +1,393 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.main {
+  padding-bottom: 60px;
+
+  .container {
+
+    .main-banners {
+      position: relative;
+
+      .main-banner {
+        @include bg-pos-size-repeat;
+        overflow: hidden;
+        position: relative;
+        padding: 100px 79px 98px;
+        box-sizing: border-box;
+        height: 500px;
+
+        .main-banner-type {
+          color: $light-blue-color;
+          font-weight: 600;
+          letter-spacing: 4.8px;
+          text-transform: uppercase;
+        }
+
+        .main-banner-title {
+          width: 576px;
+          color: #FFF;
+          font-family: "Lora", serif;
+          font-size: 50px;
+          font-weight: 400;
+          line-height: 130%;
+          margin-bottom: 40px;
+
+          span.another-color {
+            color: $light-blue-color;
+          }
+        }
+
+        .main-banner-text {
+          font-size: 24px;
+          line-height: 130%;
+          color: #fff;
+          width: 456px;
+          margin-bottom: 50px
+        }
+
+        .main-banner-action {
+
+          @include btn;
+          padding: 15px 33px;
+          font-size: 16px;
+          width: 163px;
+          height: 51px;
+
+        }
+      }
+
+      .banner-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 20px);
+          display: flex;
+          position: absolute;
+          z-index: 1;
+
+          &.move-prev-banner {
+            left: 13px;
+          }
+
+          &.move-next-banner {
+            right: 13px;
+          }
+
+        }
+      }
+    }
+
+
+  }
+}
+
+.service {
+  padding: 60px 0;
+
+  .container {
+
+    .service-head {
+      @include head-lora-38;
+    }
+
+    .service-items {
+      @include flex_center-between;
+
+      .service-item {
+        width: 291px;
+
+        .service-item-image {
+          @include bg-pos-size-repeat;
+          width: 291px;
+          height: 291px;
+          border-radius: 5px;
+        }
+
+        .service-item-title {
+          @include medium-titles-20;
+          margin: 15px 0 10px;
+        }
+
+        .service-item-description {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 130%;
+          height: 90px;
+          margin-bottom: 15px;
+        }
+
+        .service-item-info {
+          @include flex_center-between;
+
+          .service-item-price {
+            width: 110px;
+            @include medium-titles-20;
+            font-weight: 600;
+          }
+
+          .service-item-button {
+            width: 163px;
+            height: 51px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  padding: 60px 0;
+
+  .container {
+
+    @include flex_center-between;
+
+    .about-image {
+      width: 460px;
+      height: 453px;
+      border-radius: 5px;
+    }
+
+    .about-info {
+      font-size: 14px;
+
+      .about-info-head {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .about-info-description {
+        color: $dark-blue-color;
+        line-height: 130%;
+        margin-bottom: 40px;
+        width: 633px;
+
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .about-info-benefits {
+        width: 703px;
+
+        .about-info-benefits-head {
+          @include head-lora-38;
+          font-size: 26px;
+          margin-bottom: 20px;
+
+        }
+
+        .about-info-benefits-items {
+          display: grid;
+          grid-template: repeat(2, 90px) / repeat(2, 316px);
+          gap: 20px 71px;
+
+          .about-info-benefits-item {
+            @include flex_center-between;
+
+            .about-info-benefits-item-number {
+              position: relative;
+              min-width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: $blue-color;
+              color: $light-blue-color;
+              font-family: "Lora", serif;
+              font-size: 50px;
+              font-weight: 500;
+              text-align: center;
+
+              span {
+                position: absolute;
+                bottom: -5px;
+                left: 6px;
+                width: 28px;
+              }
+            }
+
+            .about-info-benefits-item-info {
+              color: $dark-blue-color;
+              line-height: 130%;
+              width: 256px;
+
+              span {
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.popular-articles {
+  padding: 60px 0;
+
+  .container {
+    position: relative;
+    @include flex-column;
+
+    .popular-articles-head {
+      @include head-lora-38;
+      margin-bottom: 0;
+    }
+
+
+
+    .navigate-to-blog {
+      align-self: flex-end;
+      @include flex_items-center;
+      color: $light-blue-color;
+
+      span {
+        font-size: 20px;
+        font-weight: 500;
+        margin-right: 14px;
+      }
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+}
+
+.reviews {
+  padding: 60px 0;
+
+  .container {
+
+    .reviews-title {
+      @include head-lora-38;
+      margin-bottom: 20px;
+
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .review-item {
+        width: 396px;
+        height: 267px;
+        box-sizing: border-box;
+        padding: 30px;
+        border-radius: 5px;
+        border: 2px solid $light-blue-color;
+
+        .review-item-head {
+          @include flex_items-center;
+
+          .review-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            @include bg-pos-size-repeat;
+            margin-right: 25px;
+          }
+
+          .review-item-name {
+            font-weight: 600;
+            color: $light-blue-color;
+          }
+        }
+
+        .review-item-text {
+          margin-top: 15px;
+          line-height: 140%;
+          color: $main-blue-color;
+        }
+      }
+
+      .review-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 5px);
+          display: flex;
+          position: absolute;
+
+          &.prev-review {
+            left: -25px;
+            transform: rotate(90deg);
+          }
+
+          &.next-review {
+            right: -25px;
+            transform: rotate(-90deg);
+          }
+
+        }
+      }
+    }
+
+  }
+
+}
+
+.contacts {
+  padding: 60px 0 120px;
+
+  .container {
+    @include flex_items-center;
+
+    .contacts-info {
+      margin-left: 26px;
+
+      .contacts-info-head {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .contacts-info-items {
+        @include flex-column;
+
+        .contacts-info-item {
+          @include flex-column;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+
+          &:first-child {
+            width: 501px;
+          }
+
+          .contacts-info-item-title {
+            @include medium-titles-20;
+            margin-bottom: 10px;
+          }
+
+          .contacts-info-item-text {
+            line-height: 130%;
+            font-size: 14px;
+          }
+
+          .contacts-info-item-button {
+            width: 153px;
+            margin-top: 10px;
+            font-size: 12px;
+
+            @include btn;
+          }
+
+          .contacts-info-item-social {
+            @include flex_items-center;
+
+            a:not(:last-child) {
+              margin-right: 20px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+

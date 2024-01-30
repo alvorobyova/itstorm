@@ -1,0 +1,116 @@
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.popup-wrapper {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.51);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+
+  .popup {
+    padding: 94px 152px 86px;
+    border-radius: 10px;
+    border: 2px solid $light-blue-color;
+    background: #FFF;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    .popup-close {
+      position: absolute;
+      top: 32px;
+      right: 31px;
+      cursor: pointer;
+    }
+
+    .popup-title {
+      @include head-lora-38;
+      margin-bottom: 20px;
+      text-align: center;
+      width: 406px;
+    }
+
+    .popup-content {
+      text-align: center;
+    }
+
+    .popup-button {
+      margin-top: 40px;
+
+    }
+
+    .popup-form {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .popup-select {
+        width: 422px;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        padding: 17px 20px;
+        border: 2px solid $light-blue-color;
+        border-radius: 3px;
+
+        select {
+          appearance: none;
+          -webkit-appearance: none;
+          border: 0;
+          outline: none;
+          width: 100%;
+          color: $light-blue-color;
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+
+
+          /*option {
+            color: $light-blue-color;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+          }*/
+        }
+      }
+
+      .popup-inputs {
+
+        width: 422px;
+        text-align: center;
+
+        .popup-input {
+          color: $light-blue-color;
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          width: 100%;
+          margin-bottom: 5px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .input {
+            width: 100%;
+          }
+        }
+      }
+
+      .popup-button {
+        margin-top: 20px;
+
+        .button {
+          width: 422px;
+          height: 51px;
+        }
+      }
+    }
+
+  }
+}

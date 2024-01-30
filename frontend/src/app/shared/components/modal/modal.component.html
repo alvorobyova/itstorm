@@ -1,0 +1,65 @@
+<div class="popup-wrapper">
+  <div class="popup">
+    <div class="popup-close" (click)="close()">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1.93562" y1="2.64999" x2="13.9564" y2="14.6708" stroke="#BEBEBE" stroke-linecap="round"/>
+        <line x1="13.9236" y1="2.62978" x2="1.90277" y2="14.6506" stroke="#BEBEBE" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="popup-title" [ngStyle]="{'width': modalType==='thanks' ? '443px' : ''}">{{ title }}</div>
+
+    <div class="popup-form" [formGroup]="form" *ngIf="form">
+
+      <div *ngIf="selectedService" class="popup-select" style="width: 422px">
+        <select formControlName="service">
+          <option value="" disabled selected>Выберите услугу...</option>
+          <option *ngFor="let service of services" [value]="service.title">{{ service.title }}</option>
+        </select>
+      </div>
+
+      <div class="popup-inputs">
+        <div class="popup-input">
+          <input type="text" class="input" placeholder="Ваше имя" formControlName="name"
+                 [ngStyle]="{'border-color': form.get('name')?.invalid
+        && (form.get('name')?.dirty || form.get('name')?.touched) ? 'red' : ''}">
+
+          <div class="invalid-message" *ngIf="form.get('name')?.invalid
+              && (form.get('name')?.dirty || form.get('name')?.touched)">
+
+            <div class="invalid-message"
+                 *ngIf="form.get('name')?.errors?.['required']">
+              Необходимо ввести имя.
+            </div>
+            <div class="invalid-message"
+                 *ngIf="form.get('name')?.errors?.['pattern']">
+              Убедитесь, что поле содержит только буквы русского алфавита и пробелы.
+            </div>
+
+          </div>
+        </div>
+        <div class="popup-input">
+          <input type="text" class="input" placeholder="Ваш номер телефона" formControlName="phone" [inputMask]="phoneInputMask"
+                 [ngStyle]="{'border-color': form.get('phone')?.invalid
+        && (form.get('phone')?.dirty || form.get('phone')?.touched) ? 'red' : ''}">
+          <div class="invalid-message" *ngIf="form.get('phone')?.invalid
+              && (form.get('phone')?.dirty || form.get('phone')?.touched) && form.get('phone')?.errors?.['required']">
+              Введите номер телефона.
+          </div>
+        </div>
+      </div>
+
+
+      <div class="popup-button">
+        <button class="button" (click)="closeModalAndCreateRequest()" [disabled]="form.invalid">{{button}}</button>
+      </div>
+    </div>
+
+    <div class="popup-text" *ngIf="description">{{description}}</div>
+
+    <div class="popup-button" *ngIf="modalType==='thanks'">
+      <button class="button" (click)="close()">{{button}}</button>
+    </div>
+
+  </div>
+</div>

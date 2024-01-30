@@ -1,0 +1,58 @@
+@import "variables";
+
+@mixin flex_items-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex_content-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex_center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex_center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin head-lora-38 {
+  color: $light-blue-color;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+
+@mixin bg-pos-size-repeat {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin medium-titles-20 {
+  color: #709FDC;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@mixin btn {
+  background: $light-blue-color;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+}
