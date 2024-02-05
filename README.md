@@ -15,7 +15,7 @@ Layout only in desktop version.
 
 The article is displayed, as well as other articles related to it</br>
 
-The page is available in 3 options:
+<ins>The page is available in 3 options:</ins>
 
 1) user is not authorized - you cannot leave comments and reactions to articles, the user is asked to register or log into the profile if he is already registered
 2) user is authorized, but there are no comments on the article yet - comments are allowed, the text 'Be the first to leave your comment on the article!' will be displayed.
@@ -31,7 +31,8 @@ The page is available in 3 options:
 ✔️ when the user opens the page, the list of assigned reactions is loaded, a check is made to see whether a reaction was given to this article, and, if necessary, this reaction is highlighted in blue (except for a complaint about a comment)
 
 <h4>Complaint about the article</h4>
-When the user clicks on the button with an exclamation mark, the message ‘Complaint has been sent’ is displayed. The state of the icon does not change after this. If the user clicks on this icon again, the user will be prompted with the message ‘Complaint has already been sent’.
+✔️ when user clicks on the button with an exclamation mark, the message ‘Complaint has been sent’ is displayed, the state of the icon does not change after this</br>
+✔️ If the user clicks on this icon again, the user will be prompted with the message ‘Complaint has already been sent’
 
 <h3>User authorization/registration</h3>
 
