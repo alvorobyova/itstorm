@@ -1,8 +1,5 @@
 ## Online promotion services agency website 🔝
 
-The project is implemented in the Angular framework, the programming language used is TypeScript.</br>
-Layout only in desktop version.
-
 <h3>Home page</h3>
 ✔️ there are 2 carousels (OwlCarousel), and an interactive map Google.Maps has been added</br>
 ✔️ when you click on the banner or the ‘More details’ button in the services block, a service request form appears, the service is automatically selected in accordance with which banner or which card button the user clicked</br>
